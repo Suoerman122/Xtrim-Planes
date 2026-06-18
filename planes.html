@@ -78,6 +78,31 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
+        /* Estilo para la lista de beneficios exclusivos */
+        .beneficios-list {
+            text-align: left;
+            margin: 15px auto 0 auto;
+            padding: 0;
+            max-width: 210px;
+            list-style: none;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .beneficios-list li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .beneficios-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #eab308;
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .planes-grid {
                 grid-template-columns: 1fr !important;
@@ -99,6 +124,7 @@
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 1;">
         
+        <!-- NAVEGACIÓN -->
         <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(12px); margin-bottom: 50px;">
             <div style="display: flex; align-items: center; gap: 12px;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="width: 32px; height: 32px;">
@@ -116,6 +142,7 @@
             <a href="index.html" style="background: #ffffff; color: #0f172a; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase;">Atrás</a>
         </header>
 
+        <!-- ENCABEZADO PRINCIPAL -->
         <div style="text-align: center; margin-bottom: 50px; padding: 0 10px;">
             <h1 class="page-title" style="font-size: 42px; font-weight: 900; text-transform: uppercase; margin: 0 0 15px 0; letter-spacing: -1px; color: #ffffff;">
                 TU INTERNET VIENE CON <br><span style="color: #eab308;">LA FIESTA MÁS GRANDE DEL FÚTBOL</span>
@@ -125,8 +152,10 @@
             </p>
         </div>
 
+        <!-- REJILLA DE PLANES -->
         <section class="planes-grid">
             
+            <!-- PLAN ESSENTIAL (300 MEGAS) -->
             <div class="plan-card">
                 <img src="plan-300.jpg" alt="Plan Essential 300 Mbps" class="plan-image">
                 <div class="plan-content">
@@ -143,7 +172,8 @@
                 </div>
             </div>
 
-            <div class="plan-card">
+            <!-- PLAN ELITE PARAMOUNT+ (800 MEGAS PARAMOUNT con Beneficios Añadidos) -->
+            <div class="plan-card" style="border-color: #eab308; box-shadow: 0 15px 35px rgba(234, 179, 8, 0.1);">
                 <img src="plan-800-paramount.jpg" alt="Plan Elite Paramount+ 800 Mbps" class="plan-image">
                 <div class="plan-content">
                     <div>
@@ -155,12 +185,24 @@
                             <span class="badge-plataforma">Zapping Plan Esencial</span>
                             <span class="badge-plataforma" style="color: #38bdf8;">Paramount+</span>
                         </div>
+                        
+                        <!-- SECCIÓN DE BENEFICIOS ADICIONALES SOLICITADOS -->
+                        <div style="margin-top: 15px; text-align: center;">
+                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
+                            <ul class="beneficios-list">
+                                <li>Instalación Gratis</li>
+                                <li>Router adicional gratis</li>
+                                <li>Cuarto mes gratis</li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Elite%20Paramount%2B%20de%20800%20Mbps%20por%20$22.10" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
+                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Elite%20Paramount%2B%20de%20800%20Mbps%20por%20$22.10%20con%20instalación%20y%20router%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
                 </div>
             </div>
 
-            <div class="plan-card" style="border-color: #eab308;">
+            <!-- PLAN ELITE PLUS (800 MEGAS DISNEY) -->
+            <div class="plan-card">
                 <img src="plan-800-disney.jpg" alt="Plan Elite Plus 800 Mbps" class="plan-image">
                 <div class="plan-content">
                     <div>
@@ -178,6 +220,7 @@
                 </div>
             </div>
 
+            <!-- PLAN SUPREME PRO (1000 MEGAS) -->
             <div class="plan-card">
                 <img src="plan-1000.jpg" alt="Plan Supreme Pro 1000 Mbps" class="plan-image">
                 <div class="plan-content">
@@ -198,6 +241,7 @@
 
         </section>
 
+        <!-- PIE DE PÁGINA RESTRICCIONES OFICIALES -->
         <footer style="text-align: center; padding: 25px 10px; color: #64748b; font-size: 11px; font-weight: 500; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px; line-height: 1.6;">
             Aplican restricciones. Precio aplica de acuerdo a forma de pago / todos los planes, a partir de 500 megas, incluyen versiones de Zapping sin costo adicional / Gratis Paramount+ hasta el 31 de Julio de 2026 / La permanencia mínima del contrato es de 36 meses / Más información, términos y condiciones en www.xtrim.com.ec
         </footer>
