@@ -3,326 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes Oficiales Xtrim | La Fiesta Más Grande del Fútbol</title>
+    <title>Planes Xtrim - Internet de Alta Velocidad</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #0b1329;
-            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%), url('futbol.jpg');
-            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%), url('futbol.JPG');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
         }
 
-        body, button, input {
-            font-family: system-ui, -apple-system, sans-serif;
-            color: #f1f5f9;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Tipografía por defecto */
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 20px 10px;
         }
 
-        .planes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Cuadrícula de Planes */
+        .plans-grid {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
-            margin-bottom: 60px;
-            padding: 0 10px;
-            align-items: stretch;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .plans-grid {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
         }
 
         .plan-card {
-            background: rgba(26, 21, 44, 0.85); 
-            border: 2px solid rgba(234, 179, 8, 0.3);
-            border-radius: 20px;
-            padding: 0 0 30px 0; 
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 30px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden; 
-            transition: transform 0.3s ease;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-5px);
-            border-color: #eab308;
-        }
-
-        .plan-image {
-            width: 100%;
-            height: auto;
-            max-height: 420px;
-            object-fit: cover;
-            border-bottom: 2px solid rgba(234, 179, 8, 0.3);
-        }
-
-        .plan-content {
-            padding: 20px;
-            flex-grow: 1;
+            flex: 1;
+            min-width: 280px;
+            max-width: 360px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
-        .badge-plataforma {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 700;
-            display: inline-block;
-            margin: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+        .plan-card.featured {
+            border-color: #38bdf8;
+            transform: scale(1.02);
         }
 
-        /* Estilo para la lista de beneficios */
-        .beneficios-list {
-            text-align: left;
-            margin: 15px auto 0 auto;
-            padding: 0;
-            max-width: 210px;
+        .badge {
+            background-color: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: uppercase;
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #f8fafc;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: #94a3b8;
+        }
+
+        .plan-features {
             list-style: none;
-            font-size: 13px;
+            margin: 25px 0;
+            text-align: left;
             color: #cbd5e1;
         }
 
-        .beneficios-list li {
-            margin-bottom: 6px;
+        .plan-features li {
+            margin-bottom: 12px;
+            padding-left: 24px;
             position: relative;
-            padding-left: 18px;
         }
 
-        .beneficios-list li::before {
+        .plan-features li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #eab308;
+            color: #38bdf8;
             font-weight: bold;
         }
 
-        @media (max-width: 768px) {
-            .planes-grid {
-                grid-template-columns: 1fr !important;
-                padding: 10px !important;
+        /* Botón de WhatsApp */
+        .btn-solicitar {
+            display: inline-block;
+            background-color: #25d366; /* Verde WhatsApp */
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        .btn-solicitar:hover {
+            background-color: #128c7e;
+        }
+
+        /* Sección de Contacto Adicional */
+        .contact-section {
+            background-color: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid #334155;
+        }
+
+        .contact-section h3 {
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 480px) {
+            .contact-links {
+                flex-direction: row;
+                justify-content: center;
             }
-            .page-title {
-                font-size: 30px !important;
-            }
-            .main-header {
-                flex-direction: column !important; 
-                gap: 20px !important;
-                padding: 20px !important;
-                text-align: center;
-            }
+        }
+
+        .contact-btn {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .contact-btn:hover {
+            background-color: #334155;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 1;">
-        
-        <!-- NAVEGACIÓN -->
-        <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(12px); margin-bottom: 50px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="width: 32px; height: 32px;">
-                    <path d="M190,240 L65,185 C58,182 55,173 58,166 L75,125 C78,118 87,114 94,117 L190,160 Z" fill="#FFF000" />
-                    <path d="M190,245 L90,290 C83,293 75,289 74,281 L70,250 C69,242 75,235 83,232 L190,195 Z" fill="#E2C200" />
-                    <path d="M210,240 L335,185 C342,182 345,173 342,166 L325,125 C322,118 313,114 306,117 L210,160 Z" fill="#FFF000" />
-                    <path d="M210,245 L310,290 C317,293 325,289 326,281 L330,250 C331,242 325,235 317,232 L210,195 Z" fill="#E2C200" />
-                </svg>
-                <div style="font-size: 26px; font-weight: 800; color: #FFF000; letter-spacing: -0.5px;">Xtrim</div>
-            </div>
-            <nav style="display: flex; gap: 30px; font-size: 14px; font-weight: 500;">
-                <a href="index.html" style="color: #cbd5e1; text-decoration: none;">Inicio</a>
-                <a href="index.html#mundial" style="color: #cbd5e1; text-decoration: none;">Disfruta el Mundial</a>
-            </nav>
-            <a href="index.html" style="background: #ffffff; color: #0f172a; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase;">Atrás</a>
+    <div class="container">
+        <header>
+            <h1>Planes Xtrim</h1>
+            <p>Elige el plan ideal para tu hogar con la mejor tecnología de fibra óptica</p>
         </header>
 
-        <!-- ENCABEZADO PRINCIPAL -->
-        <div style="text-align: center; margin-bottom: 50px; padding: 0 10px;">
-            <h1 class="page-title" style="font-size: 42px; font-weight: 900; text-transform: uppercase; margin: 0 0 15px 0; letter-spacing: -1px; color: #ffffff;">
-                TU INTERNET VIENE CON <br><span style="color: #eab308;">LA FIESTA MÁS GRANDE DEL FÚTBOL</span>
-            </h1>
-            <p style="color: #cbd5e1; font-size: 16px; max-width: 600px; margin: 0 auto; line-height: 1.5;">
-                Planes de internet streaming Xtrimadamente estables. Elige la mejor oferta comercial directo a tu hogar.
-            </p>
+        <div class="plans-grid">
+            <!-- Plan 1 -->
+            <div class="plan-card">
+                <div>
+                    <h2 class="plan-title">Plan Conectado</h2>
+                    <div class="plan-price">$22<span>/mes + Imp.</span></div>
+                    <ul class="plan-features">
+                        <li>Velocidad: 100 Mbps</li>
+                        <li>Fibra Óptica de punta a punta</li>
+                        <li>Instalación y Router con descuento</li>
+                        <li>Ideal para teletrabajo y redes sociales</li>
+                    </ul>
+                </div>
+                <!-- Enlace de WhatsApp configurado con texto dinámico -->
+                <a href="https://wa.me/593994023052?text=Hola,%20deseo%20solicitar%20el%20Plan%20Conectado%20de%20100%20Mbps" target="_blank" class="btn-solicitar">Solicitar Plan</a>
+            </div>
+
+            <!-- Plan 2 (Destacado) -->
+            <div class="plan-card featured">
+                <span class="badge">Más Vendido</span>
+                <div>
+                    <h2 class="plan-title">Plan Hogar</h2>
+                    <div class="plan-price">$27<span>/mes + Imp.</span></div>
+                    <ul class="plan-features">
+                        <li>Velocidad: 150 Mbps</li>
+                        <li>4 Meses Gratis de Beneficio</li>
+                        <li>Router e Instalación Gratis</li>
+                        <li>Perfecto para Streaming 4K y Gaming masivo</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/593994023052?text=Hola,%20deseo%20solicitar%20el%20Plan%20Hogar%20de%20150%20Mbps" target="_blank" class="btn-solicitar">Solicitar Plan</a>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="plan-card">
+                <div>
+                    <h2 class="plan-title">Plan Ultra</h2>
+                    <div class="plan-price">$35<span>/mes + Imp.</span></div>
+                    <ul class="plan-features">
+                        <li>Velocidad: 300 Mbps</li>
+                        <li>Máxima prioridad de navegación</li>
+                        <li>Conecta todos tus dispositivos sin cortes</li>
+                        <li>Soporte técnico preferencial</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/593994023052?text=Hola,%20deseo%20solicitar%20el%20Plan%20Ultra%20de%20300%20Mbps" target="_blank" class="btn-solicitar">Solicitar Plan</a>
+            </div>
         </div>
 
-        <!-- REJILLA DE PLANES -->
-        <section class="planes-grid">
-            
-            <!-- PLAN ESSENTIAL (300 MEGAS) -->
-            <div class="plan-card">
-                <img src="plan-300.jpg" alt="Plan Essential 300 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN ESSENTIAL</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>17<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,85</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma" style="color: #f59e0b;">📶 WIFI 6</span>
-                        </div>
-
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Essential%20de%20300%20Mbps%20por%20$17.85%20con%20instalación%20y%204%20mes%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
+        <!-- Sección de Atención Directa -->
+        <div class="contact-section">
+            <h3>¿Tienes dudas sobre la cobertura o los planes?</h3>
+            <p>Escríbenos o revisa nuestros medios de contacto directo.</p>
+            <div class="contact-links">
+                <a href="https://wa.me/593994023052?text=Hola,%20tengo%20una%20duda%20sobre%20la%20cobertura%20de%20Xtrim" target="_blank" class="contact-btn" style="border-color: #25d366; color: #25d366;">WhatsApp Directo</a>
+                <a href="mailto:teddyanthony883@gmail.com" class="contact-btn">Enviar Correo</a>
             </div>
-
-            <!-- PLAN ADVANCE (500 MEGAS) -->
-            <div class="plan-card">
-                <img src="WhatsApp Image 2026-06-18 at 03.27.17.jpeg" alt="Plan Advance 500 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN ADVANCE</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>19<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,13</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma">Zapping Plan Esencial</span>
-                        </div>
-
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Advance%20de%20500%20Mbps%20por%20$19.13%20con%20instalación%20y%204%20mes%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
-            </div>
-
-            <!-- NUEVO: PLAN ELITE PRO (800 MEGAS PRO) -->
-            <div class="plan-card" style="border-color: #eab308; box-shadow: 0 15px 35px rgba(234, 179, 8, 0.15);">
-                <img src="Plan800-30.jpeg" alt="Plan Elite Pro 800 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN ELITE PRO</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>30<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,00</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma">Zapping Plan Pro</span>
-                            <span class="badge-plataforma" style="color: #f43f5e;">LigaEcuabet</span>
-                            <span class="badge-plataforma" style="color: #38bdf8;">Paramount+</span>
-                        </div>
-                        
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>Router Gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Elite%20Pro%20de%20800%20Mbps%20por%20$30.00%20con%20instalación,%20router%20y%204%20mes%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
-            </div>
-
-            <!-- PLAN ELITE PARAMOUNT+ (800 MEGAS PARAMOUNT) -->
-            <div class="plan-card">
-                <img src="plan-800-paramount.jpg" alt="Plan Elite Paramount+ 800 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN ELITE PARAMOUNT+</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>22<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,10</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma">Zapping Plan Esencial</span>
-                            <span class="badge-plataforma" style="color: #38bdf8;">Paramount+</span>
-                        </div>
-                        
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>Router adicional gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Elite%20Paramount%2B%20de%20800%20Mbps%20por%20$22.10%20con%20instalación%20y%20router%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
-            </div>
-
-            <!-- PLAN ELITE PLUS (800 MEGAS DISNEY) -->
-            <div class="plan-card">
-                <img src="plan-800-disney.jpg" alt="Plan Elite Plus 800 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN ELITE PLUS</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>25<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,50</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma">Zapping Plan Esencial</span>
-                            <span class="badge-plataforma" style="color: #60a5fa;">Disney+</span>
-                            <span class="badge-plataforma" style="color: #38bdf8;">Paramount+</span>
-                        </div>
-                        
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>Router adicional gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Elite%20Plus%20de%20800%20Mbps%20por%20$25.50%20con%20instalación%20y%20router%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
-            </div>
-
-            <!-- PLAN SUPREME PRO (1000 MEGAS) -->
-            <div class="plan-card">
-                <img src="plan-1000.jpg" alt="Plan Supreme Pro 1000 Mbps" class="plan-image">
-                <div class="plan-content">
-                    <div>
-                        <div style="background: #eab308; color: #000000; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 10px;">PLAN SUPREME PRO</div>
-                        <div style="font-size: 34px; font-weight: 900; color: #ffffff; margin: 10px 0;">
-                            <span style="font-size: 20px; font-weight: 700; vertical-align: top;">$</span>40<span style="font-size: 16px; font-weight: 700; vertical-align: top;">,00</span>
-                        </div>
-                        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
-                            <span class="badge-plataforma">Zapping Plan Pro</span>
-                            <span class="badge-plataforma" style="color: #f43f5e;">LigaEcuabet</span>
-                            <span class="badge-plataforma" style="color: #a855f7;">HBO max</span>
-                        </div>
-                        
-                        <div style="margin-top: 15px; text-align: center;">
-                            <div style="font-size: 11px; font-weight: 800; color: #eab308; text-transform: uppercase; letter-spacing: 0.5px;">Beneficios:</div>
-                            <ul class="beneficios-list">
-                                <li>Instalación Gratis</li>
-                                <li>Router adicional gratis</li>
-                                <li>4 Mes gratis</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/593979867278?text=Hola,%20me%20interesa%20el%20Plan%20Supreme%20Pro%20de%201000%20Mbps%20por%20$40.00%20con%20instalación%20y%20router%20gratis" target="_blank" style="display: block; background: #eab308; color: #000000; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; font-size: 13px; margin-top: 20px;">Solicitar Plan</a>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- PIE DE PÁGINA RESTRICCIONES OFICIALES -->
-        <footer style="text-align: center; padding: 25px 10px; color: #64748b; font-size: 11px; font-weight: 500; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px; line-height: 1.6;">
-            Aplican restricciones. Precio aplica de acuerdo a forma de pago / todos los planes, a partir de 500 megas, incluyen versiones de Zapping sin costo adicional / Gratis Paramount+ hasta el 31 de Julio de 2026 / La permanencia mínima del contrato es de 36 meses / Más información, términos y condiciones en www.xtrim.com.ec
-        </footer>
-
+        </div>
     </div>
 
 </body>
