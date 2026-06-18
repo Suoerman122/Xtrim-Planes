@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes Xtrim | Fibra Óptica Simétrica</title>
     <style>
+        /* Animación sutil para el fondo futurista */
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at 50% 0%, #1a0b36 0%, #060212 50%, #020005 100%);
+            background-attachment: fixed;
+        }
+
         /* Optimizaciones globales y responsivas para celulares */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 34px !important; /* Achica el título gigante en celulares para que no se amontone */
+                font-size: 34px !important; 
                 letter-spacing: -1px !important;
                 line-height: 1.2 !important;
             }
             .main-header {
-                flex-direction: column !important; /* Alinea el logo y menú uno abajo del otro */
+                flex-direction: column !important; 
                 gap: 20px !important;
                 padding: 20px !important;
                 text-align: center;
@@ -22,24 +30,27 @@
                 gap: 15px !important;
             }
             .data-hub {
-                grid-template-columns: 1fr !important; /* Hace que las tarjetas de datos vayan en una sola fila vertical */
+                grid-template-columns: 1fr !important; 
             }
             .mundial-section {
                 padding: 30px 20px !important;
                 text-align: center !important;
             }
             .text-left-mobile {
-                text-align: center !important; /* Centra los textos para mejor lectura en pantallas chicas */
+                text-align: center !important; 
             }
         }
     </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #05020c;">
+<body>
 
-    <div style="font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #f1f5f9; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #05020c; overflow: hidden; letter-spacing: -0.1px;">
+    <!-- Red de Líneas de Estadio Futurista de fondo -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 0;"></div>
+
+    <div style="font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #f1f5f9; max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; overflow: hidden; letter-spacing: -0.1px;">
 
         <!-- 1. NAVEGACIÓN -->
-        <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; backdrop-filter: blur(10px); margin-bottom: 40px;">
+        <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(11, 4, 31, 0.6); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 16px; backdrop-filter: blur(12px); margin-bottom: 40px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);">
             <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;">
                     <path d="M190,240 L65,185 C58,182 55,173 58,166 L75,125 C78,118 87,114 94,117 L190,160 Z" fill="#FFF000" />
@@ -51,78 +62,84 @@
             </div>
             <nav class="nav-links" style="display: flex; gap: 30px; font-size: 14px; font-weight: 500; justify-content: center; flex-wrap: wrap;">
                 <a href="#tecnologia" style="color: #94a3b8; text-decoration: none;">Tecnología</a>
-                <a href="#mundial" style="color: #94a3b8; text-decoration: none;">Mundial 2026</a>
+                <a href="#mundial" style="color: #ffffff; text-decoration: none; font-weight: 700; text-shadow: 0 0 10px rgba(168,85,247,0.5);">Mundial 2026 ⚽</a>
                 <a href="#beneficios" style="color: #94a3b8; text-decoration: none;">Beneficios</a>
             </nav>
             <a href="#cobertura" style="background: #ffffff; color: #05020c; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Consultar Zona</a>
         </header>
 
         <!-- 2. HERO -->
-        <section style="text-align: center; padding: 40px 10px 80px 10px; position: relative;">
-            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 196, 238, 0.08); border: 1px solid rgba(0, 196, 238, 0.2); padding: 6px 16px; border-radius: 100px; margin-bottom: 25px;">
-                <span style="width: 6px; height: 6px; background-color: #00c4ee; border-radius: 50%; display: inline-block;"></span>
-                <span style="font-size: 11px; font-weight: 600; color: #00c4ee; text-transform: uppercase; letter-spacing: 1px;">Fibra Óptica Simétrica</span>
+        <section style="text-align: center; padding: 60px 10px 100px 10px; position: relative;">
+            <!-- Destellos de Luz de Estadio Súper Potentes -->
+            <div style="position: absolute; top: -50px; left: 15%; width: 350px; height: 350px; background: radial-gradient(circle, rgba(0, 196, 238, 0.25) 0%, transparent 70%); pointer-events: none;"></div>
+            <div style="position: absolute; top: -50px; right: 15%; width: 350px; height: 350px; background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%); pointer-events: none;"></div>
+
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); padding: 6px 16px; border-radius: 100px; margin-bottom: 25px; box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);">
+                <span style="font-size: 11px; font-weight: 800; color: #facc15; text-transform: uppercase; letter-spacing: 1px;">🏆 Vive el Mundial 2026 a Máxima Velocidad</span>
             </div>
             
-            <h1 class="hero-title" style="font-size: 60px; font-weight: 900; line-height: 1.1; color: #ffffff; margin: 0 auto 25px auto; max-width: 900px; text-transform: uppercase; letter-spacing: -2px;">
-                La conexión que redefine <br><span style="background: linear-gradient(90deg, #00c4ee, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">tu velocidad</span>
+            <h1 class="hero-title" style="font-size: 64px; font-weight: 900; line-height: 1.05; color: #ffffff; margin: 0 auto 25px auto; max-width: 950px; text-transform: uppercase; letter-spacing: -2px;">
+                La conexión que redefine <br><span style="background: linear-gradient(90deg, #00c4ee, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 40px rgba(0, 196, 238, 0.2);">tu velocidad</span>
             </h1>
             
-            <p style="font-size: 16px; color: #94a3b8; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
-                Diseñada con infraestructura pura de luz para darte latencia cero. El futuro de la navegación residencial ya está aquí.
+            <p style="font-size: 17px; color: #cbd5e1; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6;">
+                Prepárate para la mayor transmisión digital de la historia. Infraestructura de luz pura con latencia cero para gritar los goles antes que nadie.
             </p>
 
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <!-- EL BOTÓN CONECTADO A TU PÁGINA DE PLANES -->
-                <a href="planes.html" style="background: linear-gradient(90deg, #00c4ee, #008eb0); color: #05020c; padding: 16px 30px; text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 14px; text-transform: uppercase; box-shadow: 0 0 25px rgba(0, 196, 238, 0.25);">Ver Planes Oficiales</a>
+                <a href="planes.html" style="background: linear-gradient(90deg, #00c4ee, #a855f7); color: #ffffff; padding: 18px 35px; text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 15px; text-transform: uppercase; box-shadow: 0 0 35px rgba(168, 85, 247, 0.4); border: 1px solid rgba(255,255,255,0.2);">Ver Planes Oficiales</a>
             </div>
         </section>
 
         <!-- 3. DATA HUB -->
         <section id="tecnologia" class="data-hub" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 80px;">
-            <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); padding: 25px; border-radius: 16px;">
-                <div style="font-size: 36px; font-weight: 900; color: #ffffff;">99.9%</div>
-                <div style="font-size: 12px; color: #00c4ee; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Estabilidad de Red</div>
-                <p style="color: #64748b; font-size: 13px; margin-top: 5px; line-height: 1.4;">Monitoreo activo de nodos para evitar cortes.</p>
+            <div style="background: rgba(11, 4, 31, 0.4); border: 1px solid rgba(0, 196, 238, 0.15); padding: 25px; border-radius: 16px; backdrop-filter: blur(5px);">
+                <div style="font-size: 36px; font-weight: 900; color: #00c4ee;">99.9%</div>
+                <div style="font-size: 12px; color: #ffffff; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Estabilidad Certificada</div>
+                <p style="color: #94a3b8; font-size: 13px; margin-top: 5px; line-height: 1.4;">Cero caídas durante los partidos de alta demanda.</p>
             </div>
-            <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); padding: 25px; border-radius: 16px;">
-                <div style="font-size: 36px; font-weight: 900; color: #ffffff;">1 : 1</div>
-                <div style="font-size: 12px; color: #a855f7; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Velocidad Simétrica</div>
-                <p style="color: #64748b; font-size: 13px; margin-top: 5px; line-height: 1.4;">Sube archivos a la misma velocidad que descargas.</p>
+            <div style="background: rgba(11, 4, 31, 0.4); border: 1px solid rgba(168, 85, 247, 0.15); padding: 25px; border-radius: 16px; backdrop-filter: blur(5px);">
+                <div style="font-size: 36px; font-weight: 900; color: #a855f7;">1 : 1</div>
+                <div style="font-size: 12px; color: #ffffff; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Transmisión Simétrica</div>
+                <p style="color: #94a3b8; font-size: 13px; margin-top: 5px; line-height: 1.4;">Sube contenido multimedia y retransmite en vivo sin cortes.</p>
             </div>
-            <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); padding: 25px; border-radius: 16px;">
-                <div style="font-size: 36px; font-weight: 900; color: #ffffff;">&lt; 5ms</div>
-                <div style="font-size: 12px; color: #facc15; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Ping Ultra Bajo</div>
-                <p style="color: #64748b; font-size: 13px; margin-top: 5px; line-height: 1.4;">Optimizado para servidores gaming y streaming.</p>
+            <div style="background: rgba(11, 4, 31, 0.4); border: 1px solid rgba(24a, 204, 21, 0.15); padding: 25px; border-radius: 16px; backdrop-filter: blur(5px);">
+                <div style="font-size: 36px; font-weight: 900; color: #facc15;">&lt; 5ms</div>
+                <div style="font-size: 12px; color: #ffffff; font-weight: 700; text-transform: uppercase; margin-top: 5px;">Ultra Baja Latencia</div>
+                <p style="color: #94a3b8; font-size: 13px; margin-top: 5px; line-height: 1.4;">Señal en tiempo real directo desde las sedes del mundial.</p>
             </div>
         </section>
 
         <!-- 4. MUNDIAL 2026 -->
-        <section id="mundial" class="mundial-section" style="background: linear-gradient(135deg, #09041a 0%, #17072e 100%); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 24px; padding: 40px; margin-bottom: 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <section id="mundial" class="mundial-section" style="background: linear-gradient(135deg, rgba(15, 6, 48, 0.85) 0%, rgba(27, 8, 59, 0.85) 100%); border: 2px solid rgba(0, 196, 238, 0.3); border-radius: 24px; padding: 45px; margin-bottom: 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; box-shadow: 0 15px 40px rgba(0, 196, 238, 0.1);">
             <div class="text-left-mobile" style="flex: 1.2; min-width: 280px; text-align: left;">
-                <span style="color: #facc15; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px;">Ecosistema 2026</span>
-                <h2 style="font-size: 32px; font-weight: 900; color: #ffffff; line-height: 1.2; margin: 0 0 20px 0; text-transform: uppercase;">El Mundial del 2026 se juega en 4K UHD</h2>
+                <span style="color: #facc15; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px;">Estadios en Vivo • Ecosistema 2026</span>
+                <h2 style="font-size: 34px; font-weight: 900; color: #ffffff; line-height: 1.1; margin: 0 0 20px 0; text-transform: uppercase;">El Mundial del 2026 se juega en 4K UHD</h2>
                 <p style="color: #cbd5e1; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
-                    Nuestra red está lista para soportar el tráfico de streaming de la Copa del Mundo. Al activar tus planes sumas cuentas oficiales incluidas.
+                    No permitas que las pantallas congeladas arruinen los mejores momentos. Nuestra red está optimizada para soportar el tráfico de streaming de la Copa del Mundo. Al activar tus planes sumas cuentas oficiales incluidas.
                 </p>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <div style="background: rgba(0, 196, 238, 0.1); border: 1px solid rgba(0, 196, 238, 0.2); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: #ffffff; font-weight: 600;">⚽ Partidos en Vivo sin Delay</div>
+                    <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.2); padding: 8px 14px; border-radius: 8px; font-size: 13px; color: #ffffff; font-weight: 600;">🍿 Apps Oficiales Gratis</div>
+                </div>
             </div>
 
             <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%;">
                 <div style="width: 100%; max-width: 320px;">
-                    <div style="background: linear-gradient(90deg, #a855f7, #00c4ee); color: #ffffff; font-size: 11px; font-weight: 800; text-transform: uppercase; text-align: center; padding: 6px 12px; border-radius: 8px 8px 0 0;">Asesoría en vivo 👨‍💻</div>
-                    <div style="border-radius: 0 0 16px 16px; overflow: hidden; border: 2px solid rgba(168, 85, 247, 0.3); border-top: none; background-color: #020714;">
+                    <div style="background: linear-gradient(90deg, #a855f7, #00c4ee); color: #ffffff; font-size: 11px; font-weight: 800; text-transform: uppercase; text-align: center; padding: 6px 12px; border-radius: 8px 8px 0 0; box-shadow: 0 -4px 10px rgba(0,196,238,0.2);">Asesoría en vivo 👨‍💻</div>
+                    <div style="border-radius: 0 0 16px 16px; overflow: hidden; border: 2px solid rgba(0, 196, 238, 0.3); border-top: none; background-color: #020714;">
                         <img src="/asesora.jpeg" alt="Asesora Xtrim" style="width: 100%; height: auto; display: block; object-fit: cover;">
                     </div>
                 </div>
 
                 <div style="width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 12px;">
                     <!-- Disney -->
-                    <div style="background: #020714; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                    <div style="background: rgba(2, 7, 20, 0.8); border: 1px solid rgba(0, 196, 238, 0.2); border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; backdrop-filter: blur(5px);">
                         <img src="https://planesxtrim.wordpress.com/wp-content/uploads/2026/06/plus.jpg" alt="Disney+" style="height: 28px; object-fit: contain;">
                         <span style="background: rgba(0, 196, 238, 0.1); color: #00c4ee; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase;">Gratis</span>
                     </div>
                     <!-- Paramount -->
-                    <div style="background: #0064ff; border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                    <div style="background: linear-gradient(90deg, #0052d4, #0064ff); border-radius: 14px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; box-shadow: 0 4px 15px rgba(0, 100, 255, 0.3);">
                         <img src="https://planesxtrim.wordpress.com/wp-content/uploads/2026/06/xd.png" alt="Paramount+" style="height: 26px; object-fit: contain;">
                         <span style="background: #ffffff; color: #0064ff; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 800; text-transform: uppercase;">Acceso</span>
                     </div>
@@ -131,49 +148,49 @@
         </section>
 
         <!-- 5. BENEFICIOS -->
-        <section id="beneficios" style="margin-bottom: 80px;">
+        <section id="beneficios" style="margin-bottom: 80px; position: relative;">
             <div style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 24px; font-weight: 900; text-transform: uppercase; color: #ffffff;">Por qué la experiencia es superior</h2>
+                <h2 style="font-size: 26px; font-weight: 900; text-transform: uppercase; color: #ffffff; letter-spacing: -0.5px;">Por qué nuestra tecnología es líder</h2>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
-                <div class="text-left-mobile" style="text-align: left;">
+                <div class="text-left-mobile" style="text-align: left; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); padding: 20px; border-radius: 14px;">
                     <div style="font-size: 24px; margin-bottom: 10px;">📡</div>
-                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Hardware Avanzado</h3>
-                    <p style="color: #94a3b8; font-size: 14px; line-height: 1.5;">Routers potentes para gestionar múltiples dispositivos en simultáneo sin perder señal.</p>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Hardware de Última Luz</h3>
+                    <p style="color: #94a3b8; font-size: 14px; line-height: 1.5;">Routers de última generación para gestionar múltiples pantallas UHD de forma fluida y sin caídas.</p>
                 </div>
-                <div class="text-left-mobile" style="text-align: left;">
+                <div class="text-left-mobile" style="text-align: left; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.03); padding: 20px; border-radius: 14px;">
                     <div style="font-size: 24px; margin-bottom: 10px;">🛡️</div>
-                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Cero Cláusulas Ocultas</h3>
-                    <p style="color: #94a3b8; font-size: 14px; line-height: 1.5;">Navegación verdaderamente ilimitada todo el año sin cobros sorpresivos en tu planilla.</p>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Tarifas Claras y Fijas</h3>
+                    <p style="color: #94a3b8; font-size: 14px; line-height: 1.5;">Navegación verdaderamente ilimitada todo el año sin sorpresas ni variaciones en tus planillas de cobro.</p>
                 </div>
             </div>
         </section>
 
         <!-- APARTADO DE CORREO -->
-        <section id="contacto-correo" style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255,255,255,0.05); padding: 40px 20px; border-radius: 24px; text-align: center; max-width: 750px; margin: 0 auto 40px auto;">
+        <section id="contacto-correo" style="background: rgba(11, 4, 31, 0.5); border: 1px solid rgba(168, 85, 247, 0.15); padding: 40px 20px; border-radius: 24px; text-align: center; max-width: 750px; margin: 0 auto 40px auto; backdrop-filter: blur(5px);">
             <div style="font-size: 24px; margin-bottom: 10px;">✉️</div>
             <h2 style="font-size: 22px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; color: #ffffff;">¿Prefieres contactarnos por Email?</h2>
             <p style="color: #94a3b8; font-size: 14px; max-width: 500px; margin: 0 auto 25px auto; line-height: 1.5;">
-                Envíanos tus dudas directamente a nuestro buzón.
+                Envíanos tus dudas directamente a nuestro buzón de soporte digital.
             </p>
-            <a href="mailto:teddyanthony883@gmail.com?subject=Consulta%20sobre%20Planes%20Xtrim" style="background-color: rgba(255, 255, 255, 0.05); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); padding: 12px 24px; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase;">
+            <a href="mailto:teddyanthony883@gmail.com?subject=Consulta%20sobre%20Planes%20Xtrim" style="background-color: rgba(168, 85, 247, 0.1); color: #ffffff; border: 1px solid rgba(168, 85, 247, 0.3); padding: 12px 24px; text-decoration: none; border-radius: 10px; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase;">
                 Enviar un Correo
             </a>
         </section>
 
         <!-- 6. COBERTURA WHATSAPP -->
-        <section id="cobertura" style="background: radial-gradient(circle at bottom, #11082c 0%, #05020c 100%); border: 1px solid rgba(255,255,255,0.05); padding: 40px 20px; border-radius: 24px; text-align: center; max-width: 750px; margin: 0 auto 40px auto;">
+        <section id="cobertura" style="background: radial-gradient(circle at bottom, #230b5c 0%, #070314 100%); border: 1px solid rgba(0, 196, 238, 0.25); padding: 45px 20px; border-radius: 24px; text-align: center; max-width: 750px; margin: 0 auto 40px auto; box-shadow: 0 10px 30px rgba(0, 196, 238, 0.05);">
             <h2 style="font-size: 28px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; line-height: 1.2;">¿Listo para dar el gran salto técnico?</h2>
-            <p style="color: #94a3b8; font-size: 14px; max-width: 500px; margin: 0 auto 30px auto; line-height: 1.5;">
+            <p style="color: #cbd5e1; font-size: 14px; max-width: 500px; margin: 0 auto 30px auto; line-height: 1.5;">
                 Escríbenos directamente por WhatsApp y validamos la cobertura en tu barrio en menos de 5 minutos.
             </p>
-            <a href="https://wa.me/593979867278?text=Hola,%20deseo%20validar%20mi%20cobertura%20para%20la%20instalación%20de%20Planes%20Xtrim" target="_blank" style="background-color: #22c55e; color: #ffffff; padding: 16px 30px; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 0 25px rgba(34, 197, 94, 0.2); text-transform: uppercase;">
+            <a href="https://wa.me/593979867278?text=Hola,%20deseo%20validar%20mi%20cobertura%20para%20la%20instalación%20de%20Planes%20Xtrim" target="_blank" style="background-color: #22c55e; color: #ffffff; padding: 16px 30px; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 0 25px rgba(34, 197, 94, 0.35); text-transform: uppercase;">
                 Consultar Cobertura 💬
             </a>
         </section>
 
         <!-- FOOTER -->
-        <footer style="text-align: center; padding: 25px 0; color: #334155; font-size: 11px; font-weight: 500; border-top: 1px solid rgba(255, 255, 255, 0.03); margin-top: 40px;">
+        <footer style="text-align: center; padding: 25px 0; color: #475569; font-size: 11px; font-weight: 500; border-top: 1px solid rgba(168, 85, 247, 0.15); margin-top: 40px;">
             © 2026 Planes Xtrim. Contenido comercial promocional de distribución autorizada.
         </footer>
 
