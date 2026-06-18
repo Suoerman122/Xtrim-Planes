@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes Xtrim | Fibra Óptica Simétrica</title>
     <style>
-        /* Fondo basado en la imagen de referencia futbol.jpg */
+        /* Estilos del fondo solucionados para compatibilidad de extensiones (.jpg / .JPG) */
         body {
             margin: 0;
             padding: 0;
-            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.92) 100%), url('futbol.jpg');
+            background-color: #0b1329; /* Fondo oscuro de respaldo */
+            
+            /* Capa de contraste oscura + Imagen en minúsculas */
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.94) 100%), url('futbol.jpg');
+            
+            /* Regla de respaldo automático si tu archivo termina en .JPG en mayúsculas */
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.94) 100%), url('futbol.JPG');
+            
             background-size: cover;
-            background-position: center top;
+            background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-color: #0f172a;
         }
 
-        /* Optimizaciones globales y responsivas para celulares */
+        /* Ajustes responsivos para celulares y pantallas táctiles */
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 34px !important; 
@@ -48,9 +54,9 @@
 </head>
 <body>
 
-    <div style="font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #f1f5f9; max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; overflow: hidden; letter-spacing: -0.1px;">
+    <div style="font-family: system-ui, -apple-system, sans-serif; color: #f1f5f9; max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; overflow: hidden; letter-spacing: -0.1px;">
 
-        <!-- 1. NAVEGACIÓN (Inspirada en el verde de la cancha y blanco de la base en futbol.jpg) -->
+        <!-- 1. NAVEGACIÓN -->
         <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; backdrop-filter: blur(12px); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
             <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;">
@@ -84,12 +90,11 @@
             </p>
 
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <!-- Botón dorado destacando la copa mundial -->
                 <a href="planes.html" style="background: linear-gradient(90deg, #eab308, #ca8a04); color: #000000; padding: 18px 35px; text-decoration: none; border-radius: 12px; font-weight: 800; font-size: 15px; text-transform: uppercase; box-shadow: 0 4px 20px rgba(234, 179, 8, 0.4);">Ver Planes Oficiales</a>
             </div>
         </section>
 
-        <!-- 3. DATA HUB (Fondo cristalino oscuro para dejar ver el estadio atrás) -->
+        <!-- 3. DATA HUB -->
         <section id="tecnologia" class="data-hub" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 80px;">
             <div style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 16px; backdrop-filter: blur(8px);">
                 <div style="font-size: 36px; font-weight: 900; color: #22c55e;">99.9%</div>
